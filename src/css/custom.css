@@ -1,0 +1,106 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300 !important;
+}
+
+.navbar {
+  background: #3498db;
+}
+
+.navbar a {
+  color: #fff !important;
+}
+
+.navbar a:hover {
+  color: rgba(250,250,250,.6) !important;
+}
+
+.navbar .active a {
+  color: rgba(250,250,250,.6) !important;
+  background-color: transparent !important;
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid #ddd !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 22px 14px 22px 14px !important;
+  font-size: 18px !important;
+}
+
+label {
+  font-weight: 300 !important;
+  cursor: text;
+}
+
+button {
+  float: right;
+  padding: 12px 24px;
+  background: #3498db;
+  border: none;
+  color: #fff;
+  width: 102px;
+  height: 46px;
+}
+
+/* login and sign up form styles */
+#loginContainer,
+#signUpContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    display: none;
+}
+
+#loginContainer .form-group,
+#signUpContainer .form-group {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#signUpContainer input[name="firstName"],
+#signUpContainer input[name="lastName"] {
+  text-transform: capitalize;
+}
+
+#loginContainer input:focus,
+#signUpContainer input:focus {
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+#loginContainer label,
+#signUpContainer label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+#loginContainer span,
+#signUpContainer span {
+  height: 2px;
+  width: 100%;
+  display: block;
+  background: #3498db;
+  transition: all .3s ease;
+  transform: scaleX(0);
+}
+
+/* login and sign up form error styles */
+#loginForm .error + span,
+#signUpForm .error + span {
+  background: lightcoral !important;
+  transform: scaleX(1) !important;
+}
+
+#loginForm .success + span,
+#signUpForm .success + span {
+  background: palegreen !important;
+  transform: scaleX(1) !important;
+}
